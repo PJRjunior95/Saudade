@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pedido aceito</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pedido Aceito</h1>
+    <p id="poema"></p><br>
+    <a href="ressalvasautor.html" style="color: white">Ressalvas do Autor</a>
+  </div>
+  <script>
+  const textoPoema = `Vejo que aceitou meu pedido,
+  E mais uma vez aqui estou,
+  Transformando frases em rimas,
+  Pra demonstrar o meu amor,
+  Mas por hora só te digo:
+  Foi você que procurou
+  Então segura o choro
+  E desfrute sem pudor.
+  
+  Foi uma viagem intensa,
+  Viagei por longos dias e noites,
+  Da terra mais quente a mais gelada,
+  Da mais barulhenta a sussegada,
+  Mais em nenhuma delas encontrei
+  Aquilo que procurava.
+  
+  Andei perdido por um tempo,
+  Até que encontrei você,
+  A mais bela das obras de artes,
+  O mais belo ser,
+  Foi tanta perfeição num canto só,
+  Que logo desconfiei,
+  Tentei, tentei e tentei,
+  Tentei encontrar inúmeros defeitos,
+  Mas felizmente falhei,
+  E com propriedade eu te digo,
+  Que ali me encontrei.
+  
+  De pele morena, cabelos cacheados,
+  Um jeito simples e delicado,
+  Mas foi o seu belo sorriso
+  Que me deixou encantado.
+  
+  Digo que até que a Monalisa sente inveja,
+  Pois sua beleza a ultrapassou,
+  Nem mesmo a mais bela obra de arte,
+  É capaz de competir com você, amor.
+  Você chega a me lembra a Medusa,
+  Pois apenas com simples olhar
+  Faz com que de uma hora pra outra o
+  Meu corpo paralise,
+  E só me resta portanto
+  Que eu fique ali e te aprecie.
+  
+  Foi difícil te encontrar,
+  Digo até ter muita sorte,
+  Mesmo com as dificuldades
+  Tamo aqui firme e forte.
+  
+  Encontrei uma pessoa
+  Incrível e confiável,
+  Forte e amigável,
+  Te amo do fundo do meu coração,
+  Minha mulher guerreira
+  Essa poema vai pra
+  Larissa Vitória de França Oliveira
+  
+  Quer ouvir as ressalvas do Autor?`;
+  
+  let i = 0;
+  const speed = 50;
+  const p = document.getElementById("poema");
+  
+  function escrever() {
+    if (i < textoPoema.length) {
+      p.textContent += textoPoema.charAt(i);
+      i++;
+      setTimeout(escrever, speed);
+    }
+  }
+  
+  window.onload = escrever;
+  </script>
+</body>
+</html>

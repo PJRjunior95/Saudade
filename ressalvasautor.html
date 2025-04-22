@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ressalvas do Autor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Ressalvas do Autor</h1>
+    <p id="poema"></p><br>
+    <a href="https://youtu.be/udgwxWj79ek?si=fzQwscYbzoV3CY4R" style="color: white">Clique aqui ao final por favor ♡</a><br>
+  </div>
+  <script>
+  const textoPoema = `Disse nesse poema,
+  Que você era perfeita,
+  Mas em verdade te digo
+  Que a ilusão seja disfeita,
+  Pois perfeição não existe
+  E não a há nada e feito.
+  
+  Mas é os seu inúmeros defeitos,
+  Que me fazem a querer mais e mais
+  Te ter por completo,
+  Pois com você encontro paz,
+  E que a verdade seja dita
+  Você é gata demais.
+  
+  Com carinho: Patrício Alves da Silva Júnior.
+  
+    ⠀⠀⣀⡤⢤⣄⠀⣠⡤⣤⡀⠀⠀⠀
+  ⠀⠀⢀⣴⢫⠞⠛⠾⠺⠟⠛⢦⢻⣆⠀⠀
+  ⠀⠀⣼⢇⣻⡀⠀⠀⠀⠀⠀⠀⢸⡇⢿⣆⠀
+  ⠀⢸⣯⢦⣽⣷⣄⡀⠀⢀⣴⣿⣳⣬⣿⠀
+  ⢠⡞⢩⣿⠋⠙⠳⣽⢾⣯⠛⠙⢹⣯⠘⣷
+  ⠀⠈⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠋⠁⠀⠀
+    
+  `;
+  
+  let i = 0;
+  const speed = 50;
+  const p = document.getElementById("poema");
+  
+  function escrever() {
+    if (i < textoPoema.length) {
+      p.textContent += textoPoema.charAt(i);
+      i++;
+      setTimeout(escrever, speed);
+    }
+  }
+  
+  window.onload = escrever;
+  </script>
+</body>
+</html>

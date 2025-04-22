@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saudade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Saudade</h1>
+    <p id="poema"></p><br>
+    <div>
+      <a href="pedidoaceito.html" style="color: white">Sim!</a>
+      <a href="https://youtu.be/lIOfu1bckvA?si=all_s6kArQ9TDeRj" style="color: white">Não!</a>
+    </div>
+  </div>
+  <script >
+  const textoPoema = `Não aguento mais
+  Essa saudade absurda
+  Mas ideia esdrúxula,
+  Não reconheço o que sou!
+  
+  Não importa o que eu faça,
+  Ela chega e me maltrata,
+  Mas com ela vou seguir,
+  Mesmo com a dor.
+  
+  Sentimento complicado,
+  Difícil de falar,
+  Mas pra mim é rotineiro,
+  Esse é o preço do amar.
+  
+  Tento distrair a mente,
+  Com intenção de a calar,
+  Mas inevitavelmente,
+  Ela volta a aturmentar.
+  
+  Imagens vem em minha mente,
+  O peito começa apertar,
+  Vontade de simplesmente,
+  Vasculhar todo o universo 
+  afim de te encontrar.
+  
+  Não importa o lugar,
+  Não importa onde estejas,
+  Só quero você comigo.
+  E aí, você aceita?`;
+  
+  let i = 0;
+  const speed = 50;
+  const p = document.getElementById("poema");
+  
+  function escrever() {
+    if (i < textoPoema.length) {
+      p.textContent += textoPoema.charAt(i);
+      i++;
+      setTimeout(escrever, speed);
+    }
+  }
+  
+  window.onload = escrever;
+  </script>
+</body>
+</html>

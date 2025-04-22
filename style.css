@@ -1,0 +1,45 @@
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: 'monospace', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#poema {
+  font-size: 1.2rem;
+  white-space: pre-wrap;   /* mantém as quebras de linha do poema */
+  display: inline-block;   /* inline-block preserva quebras e larguras */
+  max-width: 600px;        /* opcional: limita largura igual ao container */
+  border: none;            /* remove o border-right original */
+}
+
+/* cursor como pseudo-elemento */
+#poema::after {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  width: 2px;
+  height: 1em;             /* altura exata de uma linha de texto */
+  margin-left: 2px;
+  background-color: #fff;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50%      { opacity: 1; }
+}
